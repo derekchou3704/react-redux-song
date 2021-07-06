@@ -1,4 +1,4 @@
-import { combinedReducers } from 'redux'
+import { combineReducers } from 'redux'
 
 
 //  A static Array
@@ -32,7 +32,7 @@ const selectedSongReducer = (selectSong = null, action) => {
     return selectSong
 }
 
-combinedReducers({
+export default combineReducers({
     songs: songsReducer,
     selectSong: selectedSongReducer
 })
